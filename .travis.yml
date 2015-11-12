@@ -1,23 +1,6 @@
 language: php
-
 php:
-  - 5.5
   - 5.6
+  - 5.5
+  - 5.4
   - hhvm
-  - 7
-
-before_script:
-  - travis_retry composer install --no-interaction --prefer-source
-
-script:
-  - phpunit
-
-sudo: false
-
-notifications:
-  slack: asgardcms:oJ1NpQQ7t2vslPIlKzZHVvZE
-
-matrix:
-  allow_failures:
-    - php: hhvm
-    - php: 7

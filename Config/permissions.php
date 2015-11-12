@@ -1,14 +1,10 @@
 <?php
-
 return [
-    'block.blocks' => [
-        'index',
-        'create',
-        'store',
-        'edit',
-        'update',
-        'destroy',
+    'dashboard.grid' => [
+        'save',
+        'reset',
     ],
-// append
-
+    'dashboard' => [
+        'index',
+    ],
 ];

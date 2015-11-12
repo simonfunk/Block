@@ -1,4 +1,4 @@
-<?php namespace Modules\Block\Sidebar;
+<?php namespace Modules\Dashboard\Sidebar;
 
 use Maatwebsite\Sidebar\Group;
 use Maatwebsite\Sidebar\Item;
@@ -29,17 +29,16 @@ class SidebarExtender implements \Maatwebsite\Sidebar\SidebarExtender
      */
     public function extendWith(Menu $menu)
     {
-        $menu->group(trans('core::sidebar.content'), function (Group $group) {
-            $group->item(trans('block::blocks.title.blocks'), function (Item $item) {
+        $menu->group(trans('dashboard::dashboard.name'), function (Group $group) {
+            $group->weight(0);
+            $group->hideHeading();
+
+            $group->item(trans('dashboard::dashboard.name'), function (Item $item) {
+                $item->icon('fa fa-dashboard');
+                $item->route('dashboard.index');
+                $item->isActiveWhen(route('dashboard.index', null, false));
                 $item->authorize(
-                    $this->auth->hasAccess('block.blocks.index')
-                );
-                $item->icon('fa fa-cube');
-                $item->weight(0);
-                $item->append('admin.block.block.create');
-                $item->route('admin.block.block.index');
-                $item->authorize(
-                    $this->auth->hasAccess('block.blocks.index')
+                    $this->auth->hasAccess('dashboard.index')
                 );
             });
         });

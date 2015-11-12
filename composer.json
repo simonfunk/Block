@@ -1,36 +1,28 @@
 {
-  "name": "asgardcms/block",
-  "description": "A module to create small blocks of content to display anywhere on the site.",
+  "name": "asgardcms/dashboard-module",
   "type": "asgard-module",
-  "license": "MIT",
-  "require": {
-    "php": ">=5.5",
-    "composer/installers": "~1.0",
-    "asgardcms/core-module": "~1.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.0",
-    "orchestra/testbench": "~3.1",
-    "fzaninotto/faker": "~1.5"
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/nWidart/modules"
-    }
+  "description": "Dashboard module for AsgardCMS. Handles the display of the dashboard.",
+  "keywords": [
+    "asgardcms",
+    "dashboard"
   ],
-  "autoload-dev": {
-    "psr-4": {
-      "Modules\\Block\\": ".",
-      "Modules\\": "Modules/"
-    }
-  },
+  "license": "MIT",
   "authors": [
     {
       "name": "Nicolas Widart",
-      "email": "n.widart@gmail.com"
+      "email": "info@asgardcms.com",
+      "role": "Developer"
     }
   ],
+  "support": {
+    "email": "support@asgardcms.com",
+    "issues": "https://github.com/AsgardCms/Dashboard/issues",
+    "source": "https://github.com/AsgardCms/Dashboard"
+  },
+  "require": {
+    "php": ">=5.4",
+    "composer/installers": "~1.0"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
